@@ -1,0 +1,30 @@
+@startuml appComponentesConexas 
+ (*)--> "Entra al programa"
+    --> "Visualiza menu de opciones"
+    if "opcion seleccionada" then 
+       -->[true] "Crear matriz"
+        if "Matriz creada" then 
+         -->[true] "Colocar 1's en la diagonal"
+         endif
+          if "1's colocados" then
+           -->[true] "Generar Matriz de caminos"
+           endif
+           if "matriz de caminos creada" then 
+              -->[true] "Ordenar filas por 1's"
+              endif
+           if "1's ordenados por filas" then 
+              -->[true] "Ordenar por columnas"
+              endif
+           if "Columnas ordenadas" then 
+              -->[true] "Hallar componente conexa" 
+             endif 
+           if "Componente conexa hallada" then 
+              -->[true] "Mostrar Componente conexa"
+             endif
+             if "Componente conexa mostrada" then 
+                -->[true] (*)
+             endif
+    else 
+        -->[false] (*)
+    endif 
+@endUml
